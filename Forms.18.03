@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <form action="http://google.com.br/search" method="get">
+            <fieldset>
+                <legend>Busca</legend> <!-- titulo da pesquisa-->
+                <abbr>*</abbr><label for="termo_busca">Termo de busca: </label>  <!-- abbr é campo obrigatorio -->
+                <input type="text" name="q" id="termo_busca" required placeholder="Digite a pesquisa"> <!-- required é obrigatorio | e placeholder é o que vai dentro do pesquisar-->
+            </fieldset>
+            <fieldset>
+                <div>
+                <legend>Opções de Busca</legend>
+                <label for="campo_resenha">Resenha:</label>
+                </div>
+                <div>
+                <textarea name="resenha" rows="5" cols="100" placeholder="Resenha da busca"></textarea>
+                </div>
+                <div>
+                    <label form="campo_horario">Horario de Busca</label>
+                    <select name="tbs" id="campo_horario">
+                        <option value="">Qualquer horario</option>
+                        <option value="qdr:h">Ultima hora</option>
+                        <option value="qdr:d">Ultimo dia</option>
+                        <option value="qdr:w">Ultima semana</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="campo_data">Data consulta:</label>
+                    <input type="date" name="date" id="campo_data">
+                </div>
+                <div>
+                    <label for="campo_qtd">Quantidade Resultados:</label>
+                    <input type="number" name="qtd" id="campo_qtd" min="10" max="50" step="10">
+                </div>
+                <div>
+                    <label for="campo_cpf">CPF:</label>
+                    <input type="text" name="cpf" id="campo_cpf" tabindex="1" pattern="\d(3).\d(3).\d(3)\-d(2)">
+                </div>
+                
+            </fieldset>
+            <button type="submit" formaction="http://www.google.com/search">Pesquisar Google</button>
+            <button type="submit" formaction="http://www.bing.com/search">Pesquisar Bing</button>
+
+        </form>
+    </body>
+</html>
